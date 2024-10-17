@@ -69,19 +69,7 @@ class DrlAgent(Node):
         if self.algorithm    == 'dqn':
             self.model = DQN(self.device, self.sim_speed)
         elif self.algorithm == 'ddpg':
-            self.model = DDPG(self.device, self.sim_speed)
-        elif self.algorithm == 'td3':
-            self.model = TD3(self.device, self.sim_speed)
-        elif self.algorithm == 'sac':
-            self.model = SAC(self.device, self.sim_speed)
-        elif self.algorithm == 'naf':
-            self.model = NAF(self.device, self.sim_speed)
-        elif self.algorithm == 'tdnaf2':
-            self.model = TDnaf_two(self.device, self.sim_speed)
-        elif self.algorithm == 'rbfnaf':
-            self.model = rbfnaf(self.device, self.sim_speed)
-        elif self.algorithm == 'rbf_dqn':
-            self.model = RBF_DQN(self.device, self.sim_speed)                                    
+            self.model = DDPG(self.device, self.sim_speed)                             
         else:
             quit("\033[1m" + "\033[93m" + f"invalid algorithm specified ({self.algorithm}), choose one of: dqn, ddpg, td3" + "\033[0m}")
 
